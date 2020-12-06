@@ -1,0 +1,49 @@
+studentlist = ['Sezin Tulunay','Efe Ozkara','Selin Kader','Zelis Sanlı','Eylul Oz']
+def entername():
+    i=2
+    while (0<=i<3):
+        name = input('Enter your name and surname: ')
+        if name in studentlist:
+            print('Welcome ' + str(name))
+            break
+        elif (i==0):
+            print('Please try again later')
+            break
+        else:
+            print('Wrong entry! You have only ' + str(i) + ' attempt')
+            i -= 1
+
+entername()
+
+#lessons = ['math','chem','diff','process','organic']
+def lessons():
+    courses= input('Write your courses: ')
+
+
+score = 0
+def calculate_total_average():
+
+    midterm_grade = int(input("Enter your midterm result: "))
+
+    final_grade = int(input("Enter your final result: "))
+
+    project_grade = int(input("Enter your project result: "))
+
+    # 30 % from midterm
+    # 50 % from final
+    # 20 % from project
+    score = (0.3 * midterm_grade + 0.5 * final_grade + 0.2 * project_grade)
+    print('Your score is: ' + str(score))
+    if score >= 90 and score<= 100:
+        print('AA')
+    elif (score >= 70 and score <90):
+        print('BB')
+    elif (score >= 50 and score < 70):
+        print('CC')
+    elif (score >= 30 and score < 50):
+        print('DD')
+    else:
+        print('FF')
+        print('You have failed..')
+
+calculate_total_average()
